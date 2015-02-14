@@ -1,0 +1,15 @@
+doctype
+html
+	head
+		title #{title} - My Site
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body
+		#wrapper
+			#first
+				#hiremebutton
+					| <br/><input id="clickMe" type="button" value="Hire Me?" onclick="requestInterview('#{id}');" >
+				#sidebar-footer
+			#second
+				| <embed src="http://localhost:3000/resume?id=#{id}" width="100%" height="100%">
+
+	script(src='/javascripts/interviewRequest.js')
