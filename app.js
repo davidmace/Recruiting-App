@@ -73,8 +73,8 @@ app.get('/emailIntro', function (req, res) {
   var cid = query['cid']
   var sendgrid  = require('sendgrid')("ACCOUNT INFO");
   var payload   = {
-    to      : 'davidcalvermace@gmail.com', // TODO this is my test email
-    from    : 'dmace@caltech.edu',
+    to      : 'email1', // TODO this is my test email
+    from    : 'email2',
     subject : 'Saying Hi',
     text    : 'This is my first email through SendGrid'
   }
@@ -167,7 +167,7 @@ app.get('/signup', function (req, res) {
   var sendgrid  = require('sendgrid')('ACCOUNT INFO');
   var payload   = {
     to      : email,
-    from    : 'hackerships@gmail.com',
+    from    : 'email',
     subject : 'Resume Drop',
     text    : 'Please respond with your resume attached.'
   }
